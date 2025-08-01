@@ -1,15 +1,11 @@
-import React from "react";
-
-import Dashboard from "./Dashboard";
-import TopBar from "./TopBar";
+import React from 'react'
 
 const Home = () => {
   return (
-    <>
-      <TopBar />
-      <Dashboard />
-    </>
-  );
-};
+    <div>
+      Home
+    </div>
+  )
+}
 
-export default Home;
+export default Home
