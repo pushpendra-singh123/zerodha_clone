@@ -1,11 +1,25 @@
-import React from 'react'
+import React from "react";
 
 const Positions = () => {
   return (
-    <div>
-      positions
-    </div>
-  )
-}
+    <>
+      <h3 className="title">Positions (2)</h3>
 
-export default Positions
+      <div className="order-table">
+        <table>
+          <tr>
+            <th>Product</th>
+            <th>Instrument</th>
+            <th>Qty.</th>
+            <th>Avg.</th>
+            <th>LTP</th>
+            <th>P&L</th>
+            <th>Chg.</th>
+          </tr>
+        </table>
+      </div>
+    </>
+  );
+};
+
+export default Positions;
