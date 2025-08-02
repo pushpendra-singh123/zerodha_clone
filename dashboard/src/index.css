@@ -109,7 +109,7 @@ code {
 
 .table .data p:first-child {
   font-size: 1rem;
-  color: rgb(151, 151, 151);
+  color: rgb(151, 151, 250);
 }
 
 .imp {
@@ -194,7 +194,7 @@ code {
 .order-table td {
   padding: 10px 10px;
   text-align: right;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.9rem;
   color: rgb(73, 73, 73);
 }
@@ -225,18 +225,18 @@ code {
 .col h5 {
   font-size: 1.8rem;
   color: rgb(71, 71, 71);
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .col h5 span {
-  font-weight: 300;
+  font-weight: 500;
   font-size: 0.9rem;
 }
 
 .col p {
   font-size: 0.8rem;
   color: rgb(153, 153, 153);
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 2%;
 }
 
@@ -281,8 +281,8 @@ code {
 }
 
 .menu {
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
   color: rgb(70, 70, 70);
 }
 
@@ -320,8 +320,8 @@ hr {
 }
 
 .profile .username {
-  font-size: 0.8rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /* sudo selectors */
@@ -361,7 +361,7 @@ hr {
   margin-top: 6%;
   color: rgb(173, 173, 173);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .btn {
@@ -379,7 +379,7 @@ hr {
 
 .title {
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 400;
   color: rgb(71, 71, 71);
   margin-bottom: 2%;
 }
@@ -398,8 +398,8 @@ hr {
   text-align: right;
   padding: 15px 10px;
   color: rgb(145, 145, 145);
-  font-weight: 300;
-  font-size: 0.8rem;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .order-table tr th:first-child,
@@ -422,7 +422,7 @@ hr {
 .order-table td {
   padding: 10px 10px;
   text-align: right;
-  font-weight: 400;
+  font-weight: 450;
   font-size: 0.9rem;
   color: rgb(73, 73, 73);
 }
@@ -453,18 +453,18 @@ hr {
 .col h5 {
   font-size: 1.8rem;
   color: rgb(71, 71, 71);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .col h5 span {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.9rem;
 }
 
 .col p {
   font-size: 0.8rem;
   color: rgb(153, 153, 153);
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 2%;
 }
 
@@ -505,7 +505,7 @@ hr {
 .section span p {
   display: inline-block;
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .section-icon {
@@ -525,7 +525,7 @@ hr {
 
 .data .first h3 {
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 400;
   color: rgb(71, 71, 71);
 }
 
@@ -608,7 +608,7 @@ hr {
 }
 
 .index {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   color: rgb(97, 97, 97);
@@ -624,7 +624,7 @@ hr {
 .percent {
   font-size: 0.8rem;
   font-weight: 400;
-  color: rgb(146, 146, 146);
+  color: rgb(188, 188, 60);
 }
 
 /* sudo selectors */
@@ -682,7 +682,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 0.8rem;
   position: relative;
 }
@@ -817,7 +817,7 @@ hr {
   cursor: move;
 }
 
-/* TODO */
+/* TODO CSS*/
 .list li::before {
   content: "";
   background: transparent;
@@ -840,4 +840,8 @@ hr {
 
 .action:hover {
   background-color: rgb(212, 212, 212);
+}
+
+.actions > span {
+  display: flex;
 }
