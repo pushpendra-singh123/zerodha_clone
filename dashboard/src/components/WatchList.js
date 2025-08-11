@@ -1,4 +1,5 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import axios from "axios";
 
 import GeneralContext from "./GeneralContext";
 import { Tooltip, Grow } from "@mui/material";
@@ -10,12 +11,25 @@ import {
   MoreHoriz,
 } from "@mui/icons-material";
 
-import { watchlist } from "../data/data";
 import { DoughnutChart } from "./DoughnoutChart";
 
-const labels = watchlist.map((subArray) => subArray["name"]);
-
 const WatchList = () => {
+  const [watchlist, setWatchlist] = useState([]);
+
+  useEffect(() => {
+    const fetchWatchlist = async () => {
+      try {
+        const res = await axios.get("http://localhost:3002/allWatchlist");
+        setWatchlist(res.data);
+      } catch (error) {
+        console.error("Error fetching watchlist:", error);
+      }
+    };
+
+    fetchWatchlist();
+  }, []);
+
+  const labels = watchlist.map((subArray) => subArray["name"]);
   const data = {
     labels,
     datasets: [

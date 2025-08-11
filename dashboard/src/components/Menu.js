@@ -1,17 +1,31 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
+import { useAuth } from "./AuthContext";
+import { ExitToApp } from "@mui/icons-material";
 
 const Menu = () => {
+  const { user, logout } = useAuth();
   const [selectedMenu, setSelectedMenu] = useState(0);
-  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
   };
 
-  const handleProfileClick = (index) => {
-    setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  const handleLogout = () => {
+    if (window.confirm("Are you sure you want to logout?")) {
+      logout();
+    }
+  };
+
+  // Get user initials for avatar
+  const getUserInitials = (name) => {
+    if (!name) return "U";
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase()
+      .slice(0, 2);
   };
 
   const menuClass = "menu";
@@ -90,9 +104,15 @@ const Menu = () => {
           </li>
         </ul>
         <hr />
-        <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+        <div className="profile-section">
+          <div className="profile">
+            <div className="avatar">{getUserInitials(user?.name)}</div>
+            <span className="username">{user?.name || "User"}</span>
+            <div className="logout-hover" onClick={handleLogout}>
+              <ExitToApp className="logout-icon" />
+              <span>Logout</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

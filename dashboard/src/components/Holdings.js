@@ -6,9 +6,16 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
-      setAllHoldings(res.data);
-    });
+    const fetchHoldings = async () => {
+      try {
+        const res = await axios.get("http://localhost:3002/allHoldings");
+        setAllHoldings(res.data);
+      } catch (error) {
+        console.error("Error fetching holdings:", error);
+      }
+    };
+
+    fetchHoldings();
   }, []);
 
   const labels = allHoldings.map((subArray) => subArray["name"]);

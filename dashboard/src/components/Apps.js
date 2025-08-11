@@ -1,7 +1,13 @@
 import React from "react";
 
-const App = () => {
-  return <h1>APP</h1>;
+const Apps = () => {
+  return (
+    <div className="apps">
+      <div className="no-orders">
+        <p>No apps yet.</p>
+      </div>
+    </div>
+  );
 };
 
-export default App;
+export default Apps;
